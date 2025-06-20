@@ -1,0 +1,54 @@
+.footer {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 48px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Noto Sans KR", "Pretendard", sans-serif;
+  margin-top: 80px;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #bfa14a;
+  margin-bottom: 6px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 15px;
+  color: #eee;
+  justify-content: center;
+}
+
+.contact {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 4px;
+}
+.contact a {
+  color: #bfa14a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #bfa14a;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
