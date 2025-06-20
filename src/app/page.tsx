@@ -1,15 +1,36 @@
+"use client";
+
 import styles from "./page.module.css";
+import { useCategory } from "./components/CategoryContext";
+import Link from "next/link";
+import { products } from "./components/products";
 
 export default function Home() {
+  const { category } = useCategory();
+  const filtered = products.filter((p) => p.category === category);
+
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>Welcome to Dahye's Next.js App!</h1>
-      <p className={styles.description}>
-        This is a simple example of a Next.js application.
-      </p>
-
-      <p className={styles.footer}>Created with ❤️ by Dahye</p>
-      <p>hello</p>
+      <div className={styles.productGrid}>
+        {filtered.map((product) => (
+          <Link
+            key={product.id}
+            href={`/${product.id}`}
+            className={styles.productCard}
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              className={styles.productImage}
+            />
+            <h2 className={styles.productName}>{product.name}</h2>
+            <p className={styles.productDesc}>{product.description}</p>
+            <div className={styles.productPrice}>
+              {product.price.toLocaleString()}원
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

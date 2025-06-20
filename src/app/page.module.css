@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+  min-height: 100vh;
+  background: #f7f7f7;
 }
 
 .title {
@@ -23,4 +23,82 @@
   bottom: 20px;
   font-size: 16px;
   color: #606060;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 32px 0 60px 0;
+}
+
+.productCard {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid #ececec;
+  padding: 36px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, border 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.productCard:hover {
+  box-shadow: 0 8px 32px rgba(191, 161, 74, 0.13);
+  border: 1.5px solid #bfa14a;
+  text-decoration: none;
+}
+
+.productImage {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 22px;
+  border: 1.5px solid #111;
+  background: #faf9f7;
+}
+
+.productName {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  font-family: "Noto Sans KR", "Pretendard", sans-serif;
+}
+
+.productDesc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 18px;
+  text-align: center;
+  font-family: "Noto Sans KR", "Pretendard", sans-serif;
+}
+
+.productPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: #bfa14a;
+  margin-bottom: 18px;
+  font-family: "Noto Sans KR", "Pretendard", sans-serif;
+}
+
+.buyButton {
+  background: #0064ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.buyButton:hover {
+  background: #004bb5;
 }
